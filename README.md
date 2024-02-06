@@ -1,74 +1,74 @@
-Bu Python projesi, Android Debug Bridge (ADB) aracını kullanarak Android cihazınızı kablosuz veya USB üzerinden bağlayarak kameranızı uzaktan kullanmanıza olanak tanır. Proje, telefonun kamerasından veya bilgisayarınızın kamerasından video çekmeyi sağlar.
+This Python project enables you to remotely use your camera by connecting your Android device wirelessly or via USB using the Android Debug Bridge (ADB) tool. The project allows capturing video either from your phone's camera or your computer's camera.
+
 
   
 
-Kurulum Adımları:
+Installation Steps:
 
 ----
 
   
 
-Python Kurulumu:
+Python Installation:
 
-1. ADB Kurulumu:
-- ADB (Android Debug Bridge) aracını kullanarak Android cihazınızı bilgisayarınıza bağlamak için öncelikle ADB'nin yüklü olması gerekiyor.
-- Android Studio veya SDK Platform Tools gibi bir kaynaktan ADB'yi edinebilirsiniz.
-- İndirdiğiniz dosyalar arasında bulunan adb.exe dosyasının yolunu adb_path değişkenine doğru şekilde belirtin.
+1. ADB Installation:
+- To connect your Android device to your computer using the Android Debug Bridge (ADB), ADB must be installed on your computer first.
+- You can obtain ADB from a source such as Android Studio or SDK Platform Tools.
+- Specify the correct path to the adb.exe file among the downloaded files in the adb_path variable.
 
 
-2. Gerekli Kütüphanelerin Kurulumu:
-- Gerekli Python kütüphanelerini yüklemek için terminal veya komut istemcisine şu komutu yazın: ``` pip install opencv-python numpy```
+2. Installation of Required Libraries:
+- To install the necessary Python libraries, type the following command in the terminal or command prompt: ``` pip install opencv-python numpy```
 
-3. Telefonunuzu Bağlama:
-- Telefonunuzu kablosuz veya USB üzerinden bağlamak için programı çalıştırdıktan sonra gerekli seçimleri yapın.
-- Kablosuz bağlantı için telefonun IP adresini (192.168.0.11 gibi) ve port numarasını belirtin.
-- USB bağlantısı için telefonunuzun USB hata ayıklama modunu etkinleştirin ve USB kablosu aracılığıyla bilgisayarınıza bağlayın.
+3. Connecting Your Phone:
+- After running the program to connect your phone wirelessly or via USB, make the necessary selections.
+- For wireless connection, specify the phone's IP address (such as 192.168.0.11) and port number.
+- For USB connection, enable USB debugging mode on your phone and connect it to your computer via a USB cable.
 
-4. Kamerayı Kullanma:
-- Program, telefonun kamerasını veya bilgisayarınızın kamerasını kullanma seçeneği sunar.
-- Seçiminizi yapın ve programın sizden kamerayı kullanma izni istemesini bekleyin.
+4. Using the Camera:
+- The program provides the option to use either the phone's camera or your computer's camera.
+- Make your selection and wait for the program to request permission to use the camera.
 
-5. Mikrofonu Kullanma:
-- Program, telefonun mikrofonunu veya bilgisayarınızın mikrofonunu kullanma seçeneği sunar.
-- Seçiminizi yapın ve programın sizden mikrofonu kullanma izni istemesini bekleyin.
+5. Using the Microphone:
+- The program provides the option to use either the phone's microphone or your computer's microphone.
+- Make your selection and wait for the program to request permission to use the microphone.
 
-6. Programı Kapatma:
-- Program, seçtiğiniz cihazları kullanarak video çekimini gerçekleştirecek ve sonlandıracaktır.
-- Programı kapatmak için herhangi bir tuşa basın.
-
-Bu adımları takip ederek, telefonunuzun kamerasını uzaktan kontrol etmek için bu projeyi kolayca kullanabilirsiniz.
+6. Closing the Program:
+- The program will capture video using the selected devices and terminate.
+- Press any key to close the program.
+By following these steps, you can easily use this project to remotely control your phone's camera.
 
   
   
   
 
-ADB Nasıl Kurulur ve Bağlanır?
+How to Install and Connect ADB?
 
 ----
 
   
 
-ADB Kurulumu:
+ADB Installation:
 
 
   
 
-1. SDK Platform Tools sayfasından işletim sistemine uygun ZIP dosyasını indirin.
+1. Download the appropriate ZIP file for your operating system from the SDK Platform Tools page..
 
-2. ZIP dosyasını bir klasöre çıkartın.
+2. Extract the ZIP file into a folder.
 
-3. Klasördeki adb.exe dosyasının yolunu belirleyin.
+3. Determine the path of the adb.exe file in the folder.
 
-Telefonu Bağlama:
-- A. Kablosuz Bağlantı:
-	- Telefonunuzun ayarlarından "Geliştirici Seçenekleri"ni etkinleştirin.
-	- "USB Hata Ayıklama"yı açın ve "Ağ Bağlantısı üzerinden ADB"yi etkinleştirin.
-	- Bilgisayarınızda terminal veya komut istemcisine şu komutu yazarak telefonunuzu bağlayın:```adb connect 192.168.0.1:5555```  # Telefonun IP adresi ve port numarasını belirtin.
+Connecting the Phone:
+- A. Wireless Connection:
+	- Enable 'Developer Options' on your phone from its settings.
+	- Turn on 'USB Debugging' and enable 'ADB over network' in the 'Developer options'.
+	- On your computer, type the following command in the terminal or command prompt to connect your phone:```adb connect 192.168.0.1:5555```  # Specify the IP address and port number of the phone
 
   
 
- - USB Bağlantısı:
-	- Telefonunuzun ayarlarından "Geliştirici Seçenekleri"ni etkinleştirin.
-	- "USB Hata Ayıklama"yı açın ve telefonunuzu USB kablosu ile bilgisayarınıza bağlayın.
-	- Bilgisayarınızda terminal veya komut istemcisine şu komutu yazarak telefonunuzu bağlayın: ```adb devices```
-	- Başarıyla bağlandıysanız, artık Python programınızı çalıştırabilir ve Android cihazınızın kamerasını uzaktan kontrol edebilirsiniz.
+ - USB Connection:
+	- Enable 'Developer Options' on your phone from its settings.
+	- Turn on 'USB Debugging' and connect your phone to your computer using a USB cable.
+	- On your computer, type the following command in the terminal or command prompt to connect your phone: ```adb devices```
+	- If you have successfully connected, you can now run your Python program and remotely control the camera of your Android device.
