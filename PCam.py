@@ -4,7 +4,7 @@ import subprocess
 import time
 import os
 
-adb_path = r"c:\Users\user\Documents\platform-tools_r34.0.5-windows\platform-tools\adb.exe"  # ADB'nin bulunduğu dizini belirtin
+adb_path = r"c:\Users\platform-tools_r34.0.5-windows\platform-tools\adb.exe"  # Directory where ADB is located
 os.environ["PATH"] += os.pathsep + os.path.dirname(adb_path)
 
 def capture_webcam(device_id, width, height, fps):
@@ -36,7 +36,7 @@ def capture_webcam(device_id, width, height, fps):
     
 def connect_phone_wifi():
     print("Connecting to phone via WİFİ...")
-    result = subprocess.run(["adb", "connect", "192.168.0.11:5555"], capture_output=True, text=True, check=True)
+    result = subprocess.run(["adb", "connect", "192.168.0.11:5555"], capture_output=True, text=True, check=True) # IP address of the phone
     print("Connected to phone.")
     print(result.returncode)
     print(result.stdout)
@@ -45,7 +45,7 @@ def connect_phone_wifi():
 
 def connect_phone_usb():
     print("Connecting to phone via USB...")
-    result = subprocess.run(["adb", "connect", "192.168.0.11:5555"], capture_output=True, text=True, check=True)
+    result = subprocess.run(["adb", "connect", "192.168.0.11:5555"], capture_output=True, text=True, check=True) # IP address of the phone
     print("Connected to phone.")
     print(result.returncode)
     print(result.stdout)
